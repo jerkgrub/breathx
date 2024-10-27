@@ -6,8 +6,9 @@ import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native
 import { useFonts } from 'expo-font';
 import { SplashScreen, Stack } from 'expo-router';
 import { Provider } from './Provider';
-import { TamaguiProvider, useTheme } from 'tamagui';
+import { SizableText, TamaguiProvider, useTheme } from 'tamagui';
 import config from 'tamagui.config';
+import BreathingPage from './BreathingPage';
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -56,29 +57,7 @@ function RootLayoutNav() {
   return (
     <TamaguiProvider config={config}>
       <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-        <StatusBar barStyle={colorScheme === 'dark' ? 'light-content' : 'dark-content'} />
-        <Stack>
-          <Stack.Screen
-            name="(tabs)"
-            options={{
-              headerShown: false
-            }}
-          />
-
-          <Stack.Screen
-            name="modal"
-            options={{
-              title: 'Tamagui + Expo',
-              presentation: 'modal',
-              animation: 'slide_from_right',
-              gestureEnabled: true,
-              gestureDirection: 'horizontal',
-              contentStyle: {
-                backgroundColor: theme.background.val
-              }
-            }}
-          />
-        </Stack>
+        <BreathingPage />
       </ThemeProvider>
     </TamaguiProvider>
   );
