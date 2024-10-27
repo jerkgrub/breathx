@@ -175,13 +175,13 @@ const BreathingPage = () => {
         {/* When all phases are inactive, show only the Start button */}
         {!isBreathing && !isBreathHold && !isRecovery && !isFinished && (
           <YStack gap="$7" justifyContent="center" alignItems="center">
-            <YStack gap='$3' justifyContent='center' alignItems='center'>
+            <YStack gap='$1' justifyContent='center' alignItems='center'>
             <XStack gap="$2" alignItems="center">
-              <SizableText size="$10" fontWeight="bold">
+              <SizableText size="$8" fontWeight="bold">
                 Welcome to
               </SizableText>
               <SizableText
-                size="$10"
+                size="$8"
                 backgroundColor="azure"
                 color="darkslategray"
                 fontWeight="bold"
@@ -189,18 +189,18 @@ const BreathingPage = () => {
                 breathx
               </SizableText>
               <SizableText
-                size="$10"
+                size="$8"
                 fontWeight="bold"
               >
                 🧊
               </SizableText>
             </XStack>
             <XStack gap="$2" alignItems="center">
-              <SizableText size="$6" fontWeight="bold">
+              <SizableText size="$5" fontWeight="bold">
                 programmed by
               </SizableText>
               <SizableText
-                size="$6"
+                size="$5"
                 backgroundColor="lavender"
                 color="mediumorchid"
                 fontWeight="bold"
